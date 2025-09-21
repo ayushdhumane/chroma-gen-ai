@@ -3,7 +3,6 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Upload, X, Image as ImageIcon } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-import ColorThief from "colorthief";
 
 interface ImageUploadProps {
   onColorsExtracted: (colors: { color: string; name: string; type: 'primary' | 'secondary' | 'accent' }[]) => void;
@@ -44,11 +43,13 @@ const ImageUpload = ({ onColorsExtracted, disabled = false }: ImageUploadProps) 
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
       
-      img.onload = () => {
+      img.onload = async () => {
         canvas.width = img.width;
         canvas.height = img.height;
         ctx?.drawImage(img, 0, 0);
         
+        // Dynamic import of ColorThief for client-side compatibility
+        const { default: ColorThief } = await import('colorthief');
         const colorThief = new ColorThief();
         const dominantColors = colorThief.getPalette(img, 6);
         
