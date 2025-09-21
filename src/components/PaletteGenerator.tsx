@@ -11,14 +11,11 @@ interface PaletteGeneratorProps {
   onGenerate: (palette: { color: string; name: string; type: 'primary' | 'secondary' | 'accent' }[]) => void;
 }
 
-// NOTE: Replace 'YOUR_GEMINI_API_KEY' with your actual key from a secure source like an environment variable.
-const GEMINI_API_KEY = process.env.NEXT_PUBLIC_GEMINI_API_KEY; 
-
 const PaletteGenerator = ({ onGenerate }: PaletteGeneratorProps) => {
   const [prompt, setPrompt] = useState("");
   const [isGenerating, setIsGenerating] = useState(false);
 
-  // The mock data is still useful for the random button.
+  // Expanded palette datasets
   const samplePalettes = [
     {
       name: "Tropical Sunset",
@@ -40,6 +37,116 @@ const PaletteGenerator = ({ onGenerate }: PaletteGeneratorProps) => {
         { color: "#4FACFE", name: "Sky Blue", type: 'secondary' as const },
         { color: "#43E97B", name: "Mint Green", type: 'accent' as const },
         { color: "#38F9D7", name: "Aqua", type: 'accent' as const }
+      ]
+    },
+    {
+      name: "Earth Tones",
+      colors: [
+        { color: "#8B4513", name: "Saddle Brown", type: 'primary' as const },
+        { color: "#D2691E", name: "Chocolate", type: 'primary' as const },
+        { color: "#F4A460", name: "Sandy Brown", type: 'secondary' as const },
+        { color: "#DEB887", name: "Burlywood", type: 'secondary' as const },
+        { color: "#9ACD32", name: "Yellow Green", type: 'accent' as const },
+        { color: "#228B22", name: "Forest Green", type: 'accent' as const }
+      ]
+    },
+    {
+      name: "Ocean Depths",
+      colors: [
+        { color: "#003366", name: "Deep Navy", type: 'primary' as const },
+        { color: "#336699", name: "Ocean Blue", type: 'primary' as const },
+        { color: "#66B2FF", name: "Sky Blue", type: 'secondary' as const },
+        { color: "#99CCFF", name: "Light Blue", type: 'secondary' as const },
+        { color: "#00FF99", name: "Sea Green", type: 'accent' as const },
+        { color: "#33FFCC", name: "Aqua Marine", type: 'accent' as const }
+      ]
+    },
+    {
+      name: "Golden Hour",
+      colors: [
+        { color: "#CC6600", name: "Burnt Orange", type: 'primary' as const },
+        { color: "#FF9933", name: "Golden Orange", type: 'primary' as const },
+        { color: "#FFCC66", name: "Warm Yellow", type: 'secondary' as const },
+        { color: "#FFFF99", name: "Light Yellow", type: 'secondary' as const },
+        { color: "#FF6666", name: "Sunset Pink", type: 'accent' as const },
+        { color: "#FF9999", name: "Rose", type: 'accent' as const }
+      ]
+    },
+    {
+      name: "Nordic Minimalism",
+      colors: [
+        { color: "#2C3E50", name: "Dark Slate", type: 'primary' as const },
+        { color: "#34495E", name: "Charcoal", type: 'primary' as const },
+        { color: "#7F8C8D", name: "Cool Gray", type: 'secondary' as const },
+        { color: "#BDC3C7", name: "Light Gray", type: 'secondary' as const },
+        { color: "#E8F6F3", name: "Mint White", type: 'accent' as const },
+        { color: "#D5DBDB", name: "Silver", type: 'accent' as const }
+      ]
+    },
+    {
+      name: "Cosmic Nebula",
+      colors: [
+        { color: "#4A0E4E", name: "Deep Purple", type: 'primary' as const },
+        { color: "#81226A", name: "Magenta", type: 'primary' as const },
+        { color: "#C44569", name: "Pink", type: 'secondary' as const },
+        { color: "#F8B500", name: "Cosmic Gold", type: 'secondary' as const },
+        { color: "#40407A", name: "Space Blue", type: 'accent' as const },
+        { color: "#706FD3", name: "Stellar Purple", type: 'accent' as const }
+      ]
+    },
+    {
+      name: "Forest Canopy",
+      colors: [
+        { color: "#0F3460", name: "Midnight Blue", type: 'primary' as const },
+        { color: "#16537E", name: "Forest Blue", type: 'primary' as const },
+        { color: "#18A558", name: "Forest Green", type: 'secondary' as const },
+        { color: "#68D391", name: "Leaf Green", type: 'secondary' as const },
+        { color: "#FAF089", name: "Sunlight", type: 'accent' as const },
+        { color: "#FBB6CE", name: "Blossom Pink", type: 'accent' as const }
+      ]
+    },
+    {
+      name: "Desert Mirage",
+      colors: [
+        { color: "#8B4000", name: "Desert Brown", type: 'primary' as const },
+        { color: "#CD853F", name: "Sandy Brown", type: 'primary' as const },
+        { color: "#DEB887", name: "Tan", type: 'secondary' as const },
+        { color: "#F5DEB3", name: "Wheat", type: 'secondary' as const },
+        { color: "#FF6347", name: "Sunset Red", type: 'accent' as const },
+        { color: "#FFD700", name: "Gold", type: 'accent' as const }
+      ]
+    },
+    {
+      name: "Berry Burst",
+      colors: [
+        { color: "#6B046F", name: "Dark Berry", type: 'primary' as const },
+        { color: "#A2068C", name: "Berry", type: 'primary' as const },
+        { color: "#EC4899", name: "Pink Berry", type: 'secondary' as const },
+        { color: "#F472B6", name: "Light Pink", type: 'secondary' as const },
+        { color: "#FDE047", name: "Lemon", type: 'accent' as const },
+        { color: "#34D399", name: "Mint", type: 'accent' as const }
+      ]
+    },
+    {
+      name: "Midnight City",
+      colors: [
+        { color: "#1A1A2E", name: "Midnight", type: 'primary' as const },
+        { color: "#16213E", name: "Dark Blue", type: 'primary' as const },
+        { color: "#E94560", name: "Neon Red", type: 'secondary' as const },
+        { color: "#F39C12", name: "Neon Orange", type: 'secondary' as const },
+        { color: "#00D2FF", name: "Electric Blue", type: 'accent' as const },
+        { color: "#6C5CE7", name: "Purple Glow", type: 'accent' as const }
+      ]
+    },
+    {
+      name: "Autumn Harvest",
+      colors: [
+        { color: "#8B3A00", name: "Rust", type: 'primary' as const },
+        { color: "#B8860B", name: "Dark Gold", type: 'primary' as const },
+        { color: "#FF8C00", name: "Orange", type: 'secondary' as const },
+        { color: "#FFD700", name: "Gold", type: 'secondary' as const },
+        { color: "#DC143C", name: "Crimson", type: 'accent' as const },
+        { color: "#32CD32", name: "Lime", type: 'accent' as const }
       ]
     }
   ];
@@ -67,89 +174,28 @@ const PaletteGenerator = ({ onGenerate }: PaletteGeneratorProps) => {
       return;
     }
 
-    if (!GEMINI_API_KEY) {
-      toast({
-        title: "API Key Not Found",
-        description: "Please set your Gemini API key in the environment variables.",
-        variant: "destructive",
-      });
-      return;
-    }
-
     setIsGenerating(true);
 
-    try {
-      const structuredPrompt = `Generate a color palette based on the following description. The palette must contain exactly 6 colors. For each color, provide a hex code, a name, and a type which must be one of 'primary', 'secondary', or 'accent'. Return the result as a single JSON object with a 'palette' key, and do not include any other text or explanation.
+    // Simulate AI generation delay
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
-Description: ${prompt}
+    // For demo, pick a random sample palette
+    const randomPalette = samplePalettes[Math.floor(Math.random() * samplePalettes.length)];
+    
+    onGenerate(randomPalette.colors);
+    
+    toast({
+      title: "Palette Generated!",
+      description: `Created a beautiful ${randomPalette.name.toLowerCase()} palette`,
+    });
 
-JSON format example:
-{
-  "palette": [
-    { "color": "#000000", "name": "Dark Black", "type": "primary" },
-    { "color": "#FFFFFF", "name": "Pure White", "type": "primary" },
-    { "color": "#FF0000", "name": "Vivid Red", "type": "secondary" },
-    { "color": "#00FF00", "name": "Vivid Green", "type": "secondary" },
-    { "color": "#0000FF", "name": "Bright Blue", "type": "accent" },
-    { "color": "#FFFF00", "name": "Bright Yellow", "type": "accent" }
-  ]
-}`;
-
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent?key=${AIzaSyBq2llYQ-DlBmzb42afjyHAmEw9JZhhuPo}`,
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            contents: [{
-              parts: [{ text: structuredPrompt }],
-            }],
-          }),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error(`API error: ${response.statusText}`);
-      }
-
-      const data = await response.json();
-      
-      const rawText = data.candidates[0].content.parts[0].text;
-      const jsonStart = rawText.indexOf('{');
-      const jsonEnd = rawText.lastIndexOf('}') + 1;
-      const jsonString = rawText.substring(jsonStart, jsonEnd);
-      
-      const parsedData = JSON.parse(jsonString);
-      const generatedPalette = parsedData.palette;
-
-      if (!generatedPalette || generatedPalette.length === 0) {
-        throw new Error("Could not extract a valid palette from the response.");
-      }
-
-      onGenerate(generatedPalette);
-      
-      toast({
-        title: "Palette Generated!",
-        description: "A new color palette has been created using Google's Gemini.",
-      });
-    } catch (error: any) {
-      console.error("LLM API call failed:", error);
-      toast({
-        title: "Generation Failed",
-        description: `There was an error generating the palette: ${error.message}`,
-        variant: "destructive",
-      });
-    } finally {
-      setIsGenerating(false);
-    }
+    setIsGenerating(false);
   };
 
   const generateRandomPalette = async () => {
     setIsGenerating(true);
     
-    // Simulate generation with existing mock data
+    // Simulate generation
     await new Promise(resolve => setTimeout(resolve, 1500));
     
     const randomPalette = samplePalettes[Math.floor(Math.random() * samplePalettes.length)];
