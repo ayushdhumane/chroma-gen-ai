@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "colorthief": "^2.6.0"
-  }
   "name": "chromagen",
   "version": "1.0.0",
   "scripts": {
