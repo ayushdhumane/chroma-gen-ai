@@ -5,7 +5,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Wand2, Download, Shuffle } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
-import ImageUpload from "./ImageUpload";
 
 interface PaletteGeneratorProps {
   onGenerate: (palette: { color: string; name: string; type: 'primary' | 'secondary' | 'accent' }[]) => void;
@@ -70,35 +69,23 @@ const PaletteGenerator = ({ onGenerate }: PaletteGeneratorProps) => {
       return;
     }
 
+    setIsGenerating(true);
 
-  setIsGenerating(true);
+    // Simulate AI generation delay
+    await new Promise(resolve => setTimeout(resolve, 2000));
 
-  try {
-    const res = await fetch("http://localhost:8000/generate", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt }),
-    });
-
-    if (!res.ok) throw new Error("API error");
-
-    const data = await res.json();
-    onGenerate(data.colors);
-
+    // For demo, pick a random sample palette
+    const randomPalette = samplePalettes[Math.floor(Math.random() * samplePalettes.length)];
+    
+    onGenerate(randomPalette.colors);
+    
     toast({
       title: "Palette Generated!",
-      description: `Created a beautiful ${data.name.toLowerCase()} palette`,
+      description: `Created a beautiful ${randomPalette.name.toLowerCase()} palette`,
     });
-  } catch (err) {
-    toast({
-      title: "Error",
-      description: "Failed to generate palette. Please try again.",
-      variant: "destructive",
-    });
-  }
 
-  setIsGenerating(false);
-};
+    setIsGenerating(false);
+  };
 
   const generateRandomPalette = async () => {
     setIsGenerating(true);
@@ -189,10 +176,6 @@ const PaletteGenerator = ({ onGenerate }: PaletteGeneratorProps) => {
               <Shuffle className="h-4 w-4" />
             </Button>
           </div>
-        </div>
-
-        <div className="border-t pt-4 space-y-4">
-          <ImageUpload onColorsExtracted={onGenerate} />
         </div>
 
         <div className="border-t pt-4">
