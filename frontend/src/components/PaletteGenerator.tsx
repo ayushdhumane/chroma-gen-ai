@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, Wand2, Download, Shuffle } from "lucide-react";
 import { toast } from "@/hooks/use-toast";
+import ImageUpload from "./ImageUpload";
 
 interface PaletteGeneratorProps {
   onGenerate: (palette: { color: string; name: string; type: 'primary' | 'secondary' | 'accent' }[]) => void;
@@ -188,6 +189,10 @@ const PaletteGenerator = ({ onGenerate }: PaletteGeneratorProps) => {
               <Shuffle className="h-4 w-4" />
             </Button>
           </div>
+        </div>
+
+        <div className="border-t pt-4 space-y-4">
+          <ImageUpload onColorsExtracted={onGenerate} />
         </div>
 
         <div className="border-t pt-4">

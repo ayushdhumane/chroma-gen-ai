@@ -408,7 +408,270 @@
     ]
   },
   {
-    "name": "Amethyst",
+    "name": "Amethyst Dreams",
+    "tags": ["purple", "luxury", "crystal", "mystical"],
+    "colors": [
+      { "color": "#4B0082", "name": "Deep Amethyst", "type": "primary" },
+      { "color": "#8A2BE2", "name": "Blue Violet", "type": "primary" },
+      { "color": "#9370DB", "name": "Medium Purple", "type": "secondary" },
+      { "color": "#BA55D3", "name": "Medium Orchid", "type": "secondary" },
+      { "color": "#DDA0DD", "name": "Plum", "type": "accent" },
+      { "color": "#E6E6FA", "name": "Lavender", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Golden Hour",
+    "tags": ["sunset", "warm", "photography", "golden"],
+    "colors": [
+      { "color": "#FF7F00", "name": "Amber", "type": "primary" },
+      { "color": "#FFB347", "name": "Peach", "type": "primary" },
+      { "color": "#FFCC5C", "name": "Golden Yellow", "type": "secondary" },
+      { "color": "#FF6347", "name": "Tomato", "type": "secondary" },
+      { "color": "#FF4500", "name": "Orange Red", "type": "accent" },
+      { "color": "#8B4513", "name": "Saddle Brown", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Nordic Minimalism",
+    "tags": ["minimal", "clean", "scandinavian", "white"],
+    "colors": [
+      { "color": "#F8F9FA", "name": "Pure White", "type": "primary" },
+      { "color": "#E9ECEF", "name": "Light Gray", "type": "primary" },
+      { "color": "#DEE2E6", "name": "Silver", "type": "secondary" },
+      { "color": "#ADB5BD", "name": "Gray", "type": "secondary" },
+      { "color": "#6C757D", "name": "Slate Gray", "type": "accent" },
+      { "color": "#495057", "name": "Dark Gray", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Tropical Paradise",
+    "tags": ["tropical", "vacation", "bright", "jungle"],
+    "colors": [
+      { "color": "#00CED1", "name": "Dark Turquoise", "type": "primary" },
+      { "color": "#20B2AA", "name": "Light Sea Green", "type": "primary" },
+      { "color": "#98FB98", "name": "Pale Green", "type": "secondary" },
+      { "color": "#ADFF2F", "name": "Green Yellow", "type": "secondary" },
+      { "color": "#FFD700", "name": "Gold", "type": "accent" },
+      { "color": "#FF69B4", "name": "Hot Pink", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Industrial Steel",
+    "tags": ["industrial", "metal", "modern", "urban"],
+    "colors": [
+      { "color": "#2F4F4F", "name": "Dark Slate Gray", "type": "primary" },
+      { "color": "#708090", "name": "Slate Gray", "type": "primary" },
+      { "color": "#B0C4DE", "name": "Light Steel Blue", "type": "secondary" },
+      { "color": "#C0C0C0", "name": "Silver", "type": "secondary" },
+      { "color": "#FF6347", "name": "Rust", "type": "accent" },
+      { "color": "#FFA500", "name": "Orange", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Cherry Blossom",
+    "tags": ["spring", "sakura", "soft", "japanese"],
+    "colors": [
+      { "color": "#FFB6C1", "name": "Light Pink", "type": "primary" },
+      { "color": "#FFC0CB", "name": "Pink", "type": "primary" },
+      { "color": "#FFCCCB", "name": "Light Coral", "type": "secondary" },
+      { "color": "#F0E68C", "name": "Khaki", "type": "secondary" },
+      { "color": "#90EE90", "name": "Light Green", "type": "accent" },
+      { "color": "#8FBC8F", "name": "Dark Sea Green", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Deep Ocean",
+    "tags": ["ocean", "deep", "mysterious", "navy"],
+    "colors": [
+      { "color": "#000080", "name": "Navy", "type": "primary" },
+      { "color": "#191970", "name": "Midnight Blue", "type": "primary" },
+      { "color": "#4682B4", "name": "Steel Blue", "type": "secondary" },
+      { "color": "#5F9EA0", "name": "Cadet Blue", "type": "secondary" },
+      { "color": "#00CED1", "name": "Dark Turquoise", "type": "accent" },
+      { "color": "#48D1CC", "name": "Medium Turquoise", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Harvest Moon",
+    "tags": ["autumn", "harvest", "orange", "cozy"],
+    "colors": [
+      { "color": "#CD853F", "name": "Peru", "type": "primary" },
+      { "color": "#D2691E", "name": "Chocolate", "type": "primary" },
+      { "color": "#DEB887", "name": "Burlywood", "type": "secondary" },
+      { "color": "#F4A460", "name": "Sandy Brown", "type": "secondary" },
+      { "color": "#DAA520", "name": "Goldenrod", "type": "accent" },
+      { "color": "#B8860B", "name": "Dark Goldenrod", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Electric Dreams",
+    "tags": ["electric", "neon", "cyberpunk", "bright"],
+    "colors": [
+      { "color": "#FF1493", "name": "Deep Pink", "type": "primary" },
+      { "color": "#00FFFF", "name": "Cyan", "type": "primary" },
+      { "color": "#ADFF2F", "name": "Green Yellow", "type": "secondary" },
+      { "color": "#FF69B4", "name": "Hot Pink", "type": "secondary" },
+      { "color": "#9370DB", "name": "Medium Purple", "type": "accent" },
+      { "color": "#00FA9A", "name": "Medium Spring Green", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Coffee & Cream",
+    "tags": ["coffee", "neutral", "warm", "beige"],
+    "colors": [
+      { "color": "#6F4E37", "name": "Coffee", "type": "primary" },
+      { "color": "#8B4513", "name": "Saddle Brown", "type": "primary" },
+      { "color": "#A0522D", "name": "Sienna", "type": "secondary" },
+      { "color": "#D2B48C", "name": "Tan", "type": "secondary" },
+      { "color": "#F5DEB3", "name": "Wheat", "type": "accent" },
+      { "color": "#FFF8DC", "name": "Cornsilk", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Arctic Frost",
+    "tags": ["winter", "cold", "ice", "blue"],
+    "colors": [
+      { "color": "#B0E0E6", "name": "Powder Blue", "type": "primary" },
+      { "color": "#87CEEB", "name": "Sky Blue", "type": "primary" },
+      { "color": "#87CEFA", "name": "Light Sky Blue", "type": "secondary" },
+      { "color": "#ADD8E6", "name": "Light Blue", "type": "secondary" },
+      { "color": "#E0FFFF", "name": "Light Cyan", "type": "accent" },
+      { "color": "#F0FFFF", "name": "Azure", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Rose Garden",
+    "tags": ["roses", "romantic", "pink", "garden"],
+    "colors": [
+      { "color": "#DC143C", "name": "Crimson", "type": "primary" },
+      { "color": "#B22222", "name": "Fire Brick", "type": "primary" },
+      { "color": "#CD5C5C", "name": "Indian Red", "type": "secondary" },
+      { "color": "#F08080", "name": "Light Coral", "type": "secondary" },
+      { "color": "#FFA07A", "name": "Light Salmon", "type": "accent" },
+      { "color": "#FFE4E1", "name": "Misty Rose", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Retro Gaming",
+    "tags": ["retro", "gaming", "8bit", "colorful"],
+    "colors": [
+      { "color": "#FF0000", "name": "Red", "type": "primary" },
+      { "color": "#00FF00", "name": "Lime", "type": "primary" },
+      { "color": "#0000FF", "name": "Blue", "type": "secondary" },
+      { "color": "#FFFF00", "name": "Yellow", "type": "secondary" },
+      { "color": "#FF00FF", "name": "Magenta", "type": "accent" },
+      { "color": "#00FFFF", "name": "Cyan", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Sunset Boulevard",
+    "tags": ["sunset", "boulevard", "warm", "vintage"],
+    "colors": [
+      { "color": "#FF6347", "name": "Tomato", "type": "primary" },
+      { "color": "#FF7F50", "name": "Coral", "type": "primary" },
+      { "color": "#FFA500", "name": "Orange", "type": "secondary" },
+      { "color": "#FFD700", "name": "Gold", "type": "secondary" },
+      { "color": "#FFFFE0", "name": "Light Yellow", "type": "accent" },
+      { "color": "#F0E68C", "name": "Khaki", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Emerald Forest",
+    "tags": ["emerald", "forest", "rich", "green"],
+    "colors": [
+      { "color": "#006400", "name": "Dark Green", "type": "primary" },
+      { "color": "#228B22", "name": "Forest Green", "type": "primary" },
+      { "color": "#32CD32", "name": "Lime Green", "type": "secondary" },
+      { "color": "#90EE90", "name": "Light Green", "type": "secondary" },
+      { "color": "#98FB98", "name": "Pale Green", "type": "accent" },
+      { "color": "#F0FFF0", "name": "Honeydew", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Cosmic Nebula",
+    "tags": ["space", "cosmic", "nebula", "purple"],
+    "colors": [
+      { "color": "#4B0082", "name": "Indigo", "type": "primary" },
+      { "color": "#8A2BE2", "name": "Blue Violet", "type": "primary" },
+      { "color": "#9400D3", "name": "Violet", "type": "secondary" },
+      { "color": "#9932CC", "name": "Dark Orchid", "type": "secondary" },
+      { "color": "#BA55D3", "name": "Medium Orchid", "type": "accent" },
+      { "color": "#E6E6FA", "name": "Lavender", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Desert Sunrise",
+    "tags": ["desert", "sunrise", "sand", "warm"],
+    "colors": [
+      { "color": "#CD853F", "name": "Peru", "type": "primary" },
+      { "color": "#F4A460", "name": "Sandy Brown", "type": "primary" },
+      { "color": "#DEB887", "name": "Burlywood", "type": "secondary" },
+      { "color": "#D2B48C", "name": "Tan", "type": "secondary" },
+      { "color": "#FFE4B5", "name": "Moccasin", "type": "accent" },
+      { "color": "#FFEFD5", "name": "Papaya Whip", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Midnight Express",
+    "tags": ["midnight", "dark", "mysterious", "black"],
+    "colors": [
+      { "color": "#000000", "name": "Black", "type": "primary" },
+      { "color": "#2F2F2F", "name": "Dark Gray", "type": "primary" },
+      { "color": "#696969", "name": "Dim Gray", "type": "secondary" },
+      { "color": "#808080", "name": "Gray", "type": "secondary" },
+      { "color": "#A9A9A9", "name": "Dark Gray", "type": "accent" },
+      { "color": "#C0C0C0", "name": "Silver", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Coral Reef",
+    "tags": ["coral", "reef", "ocean", "tropical"],
+    "colors": [
+      { "color": "#FF7F50", "name": "Coral", "type": "primary" },
+      { "color": "#FF6347", "name": "Tomato", "type": "primary" },
+      { "color": "#FFA07A", "name": "Light Salmon", "type": "secondary" },
+      { "color": "#20B2AA", "name": "Light Sea Green", "type": "secondary" },
+      { "color": "#00CED1", "name": "Dark Turquoise", "type": "accent" },
+      { "color": "#AFEEEE", "name": "Pale Turquoise", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Vintage Poster",
+    "tags": ["vintage", "retro", "poster", "muted"],
+    "colors": [
+      { "color": "#D2691E", "name": "Chocolate", "type": "primary" },
+      { "color": "#CD853F", "name": "Peru", "type": "primary" },
+      { "color": "#BDB76B", "name": "Dark Khaki", "type": "secondary" },
+      { "color": "#F0E68C", "name": "Khaki", "type": "secondary" },
+      { "color": "#E6E6FA", "name": "Lavender", "type": "accent" },
+      { "color": "#D8BFD8", "name": "Thistle", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Urban Jungle",
+    "tags": ["urban", "jungle", "green", "concrete"],
+    "colors": [
+      { "color": "#556B2F", "name": "Dark Olive Green", "type": "primary" },
+      { "color": "#6B8E23", "name": "Olive Drab", "type": "primary" },
+      { "color": "#9ACD32", "name": "Yellow Green", "type": "secondary" },
+      { "color": "#ADFF2F", "name": "Green Yellow", "type": "secondary" },
+      { "color": "#696969", "name": "Dim Gray", "type": "accent" },
+      { "color": "#A9A9A9", "name": "Dark Gray", "type": "accent" }
+    ]
+  },
+  {
+    "name": "Strawberry Fields",
+    "tags": ["strawberry", "sweet", "red", "summer"],
+    "colors": [
+      { "color": "#DC143C", "name": "Crimson", "type": "primary" },
+      { "color": "#FF1493", "name": "Deep Pink", "type": "primary" },
+      { "color": "#FF69B4", "name": "Hot Pink", "type": "secondary" },
+      { "color": "#FFB6C1", "name": "Light Pink", "type": "secondary" },
+      { "color": "#98FB98", "name": "Pale Green", "type": "accent" },
+      { "color": "#90EE90", "name": "Light Green", "type": "accent" }
+    ]
+  },
+  {
     "tags": ["crystal", "purple", "cool", "gem"],
     "colors": [
       { "color": "#4A2040", "name": "Deep Plum", "type": "primary" },
